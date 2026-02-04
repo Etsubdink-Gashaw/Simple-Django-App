@@ -15,7 +15,7 @@ def task_list(request):
     return render(request, 'todo/task_list.html', {'tasks': tasks})
 
 
-@require_POST
+@require_POST 
 def toggle_task(request, task_id):
     task = get_object_or_404(Task, id=task_id)
     task.completed = not task.completed
